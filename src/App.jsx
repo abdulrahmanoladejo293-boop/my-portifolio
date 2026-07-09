@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import ProjectGrid from './components/ProjectGrid'
 import Contact from './components/Contact'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ProjectGrid />
         <Contact />
       </main>
+      <Analytics />
     </>
   )
 }

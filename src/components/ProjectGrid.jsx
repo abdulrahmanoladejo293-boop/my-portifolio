@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProjectGrid.module.css';
 
 export default function ProjectGrid() {
