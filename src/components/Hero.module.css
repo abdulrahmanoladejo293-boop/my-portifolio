@@ -1,0 +1,171 @@
+.heroSection {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 40px 40px;
+  background-color: var(--bg-navy-dark);
+  box-sizing: border-box;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.subTitle {
+  color: var(--text-white);
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.mainTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tagLine {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1.1;
+  margin: 10px 0 0 0;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 25px 0 40px 0;
+}
+
+.highlight {
+  color: var(--text-white);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.primaryCta {
+  text-decoration: none;
+  background-color: var(--text-white);
+  color: var(--bg-navy-dark);
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.primaryCta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px rgba(255, 255, 255, 0.3);
+}
+
+.secondaryCta {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.secondaryCta:hover {
+  border-color: var(--text-white);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Sophisticated Image Frame */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frameContainer {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background-color: var(--bg-navy-light);
+  border-radius: 8px;
+  box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.7);
+  transition: var(--transition-smooth);
+}
+
+.profilePic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  mix-blend-mode: luminosity; /* Blends beautifully with theme background colors */
+  transition: var(--transition-smooth);
+}
+
+.frameOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.3);
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+/* Elegant visual micro-interaction on hover */
+.frameContainer:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px 0px rgba(255, 255, 255, 0.9);
+}
+
+.frameContainer:hover .profilePic {
+  mix-blend-mode: normal;
+}
+
+.frameContainer:hover .frameOverlay {
+  background-color: transparent;
+}
+
+/* Desktop and Tablet Responsiveness */
+@media (max-width: 992px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .description {
+    margin: 25px auto 40px auto;
+  }
+  
+  .ctaGroup {
+    justify-content: center;
+  }
+  
+  .imageWrapper {
+    order: -1; /* Puts image on top for smaller layouts */
+  }
+}

@@ -1,0 +1,197 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(10, 25, 47, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition-smooth);
+}
+
+/* Enhances background density as user scrolls down */
+.scrolled {
+  height: 70px;
+  background-color: rgba(10, 25, 47, 0.95);
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-white);
+  letter-spacing: -0.5px;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.menuToggle span {
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-white);
+  border-radius: 999px;
+  transition: var(--transition-smooth);
+}
+
+.menuToggleOpen span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuToggleOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggleOpen span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.navMenu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--text-white);
+}
+
+/* Modern clean slide line on hover */
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--text-white);
+  transition: var(--transition-smooth);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navAction {
+  display: flex;
+  align-items: center;
+}
+
+.ctaButton {
+  text-decoration: none;
+  color: var(--text-white);
+  border: 1px solid var(--text-white);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  background: transparent;
+}
+
+.ctaButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Desktop First Layout optimization */
+@media (max-width: 768px) {
+  .header {
+    height: 72px;
+  }
+
+  .scrolled {
+    height: 66px;
+  }
+
+  .navContainer {
+    padding: 0 18px;
+  }
+
+  .menuToggle {
+    display: flex;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .navAction {
+    margin-left: 0;
+  }
+
+  .navMenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 18px;
+    left: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    background: rgba(10, 25, 47, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(2, 12, 27, 0.35);
+  }
+
+  .navMenuOpen {
+    display: flex;
+  }
+
+  .navLink {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .ctaButton {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .ctaButton {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+}

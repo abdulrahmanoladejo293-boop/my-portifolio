@@ -1,0 +1,186 @@
+.contactSection {
+  padding: 120px 24px 40px;
+  background-color: var(--bg-navy-light);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.contentBlock {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  margin-bottom: clamp(48px, 10vw, 100px);
+  padding: 0 8px;
+}
+
+.overhead {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.mainHeading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: var(--text-white);
+}
+
+.pitch {
+  margin: 0 auto 32px;
+  max-width: 680px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.commsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.commsCard {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.commsLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+}
+
+.commsValue {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.commsValue:hover {
+  color: var(--accent-cyan);
+}
+
+.actionBlock {
+  display: flex;
+  justify-content: center;
+}
+
+.gitHubCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.gitHubCta:hover {
+  background: rgba(100, 255, 218, 0.12);
+  transform: translateY(-2px);
+}
+
+.footerBase {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.footerBase p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 96px 16px 32px;
+  }
+
+  .contentBlock {
+    margin-bottom: 42px;
+    padding: 0;
+  }
+
+  .commsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .commsCard {
+    padding: 16px;
+  }
+
+  .gitHubCta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 84px 12px 24px;
+  }
+
+  .overhead {
+    font-size: 0.8rem;
+    letter-spacing: 1.4px;
+  }
+
+  .mainHeading {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+  }
+
+  .pitch {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .commsLabel {
+    font-size: 0.72rem;
+  }
+
+  .commsValue {
+    font-size: 0.94rem;
+  }
+
+  .gitHubCta {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .footerBase p {
+    font-size: 0.88rem;
+  }
+}
