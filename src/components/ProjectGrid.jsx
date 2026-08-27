@@ -77,15 +77,12 @@ export default function ProjectGrid() {
               </div>
 
               <div className={styles.cardBody}>
-                <span className={styles.projectTag}>{project.tagline}</span>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <p className={styles.projectDescription}>{project.description}</p>
-                
-                <div className={styles.techList}>
-                  {project.tech.map((t, idx) => (
-                    <span key={idx} className={styles.techTag}>{t}</span>
-                  ))}
-                </div>
+                <img
+                  className={styles.previewImage}
+                  src={`https://image.thum.io/get/width/1200/crop/700/${project.url}`}
+                  alt={`${project.title} website preview`}
+                  loading="lazy"
+                />
 
                 <div className={styles.actionOverlay}>
                   <div className={styles.overlayText}>
