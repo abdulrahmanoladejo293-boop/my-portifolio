@@ -97,7 +97,7 @@
   transform: translateY(-3px);
 }
 
-/* Sophisticated Image Frame */
+
 .imageWrapper {
   display: flex;
   justify-content: center;
@@ -119,7 +119,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  mix-blend-mode: luminosity; /* Blends beautifully with theme background colors */
+  mix-blend-mode: luminosity; 
   transition: var(--transition-smooth);
 }
 
@@ -135,7 +135,6 @@
   cursor: pointer;
 }
 
-/* Elegant visual micro-interaction on hover */
 .frameContainer:hover {
   transform: translate(-4px, -4px);
   box-shadow: 12px 12px 0px 0px rgba(255, 255, 255, 0.9);
@@ -149,7 +148,6 @@
   background-color: transparent;
 }
 
-/* Desktop and Tablet Responsiveness */
 @media (max-width: 992px) {
   .heroContainer {
     grid-template-columns: 1fr;
@@ -166,6 +164,6 @@
   }
   
   .imageWrapper {
-    order: -1; /* Puts image on top for smaller layouts */
+    order: -1; 
   }
 }

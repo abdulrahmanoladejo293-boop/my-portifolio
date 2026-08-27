@@ -5,7 +5,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Monitors page scrolling to inject a deeper backdrop filter once the user moves down
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -66,7 +65,7 @@ export default function Navbar() {
 
         <div className={styles.navAction}>
           <a href="#contact" className={styles.ctaButton}>
-            Hire Me
+            Hire Me 
           </a>
         </div>
       </div>

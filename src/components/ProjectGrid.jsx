@@ -29,6 +29,20 @@ export default function ProjectGrid() {
       description: "A masterclass hotel presentation site designed with flawless typography, balanced proportions, and seamless interactions.",
       url: "https://luxury-hotel-and-suites-4zcq.vercel.app/",
       tech: ["React.jsx", "Interactive Dom"]
+    },
+    {
+      title: "Hire Hub",
+      tagline: "Recruitment & Job Platform",
+      description: "A responsive hiring experience that brings job discovery, candidate matching, and recruitment workflows together in one focused platform.",
+      url: "https://hire-hub-sand-sigma.vercel.app/",
+      tech: ["React.jsx", "JavaScript", "CSS3"]
+    },
+    {
+      title: "Nike Running Club",
+      tagline: "Editorial Product Experience",
+      description: "An immersive Nike running study that combines cinematic product storytelling, interactive object exploration, field notes, and a complete visual archive.",
+      url: "https://rocky-five-coral.vercel.app/",
+      tech: ["React.jsx", "JavaScript", "CSS3"]
     }
   ];
 
