@@ -144,7 +144,7 @@
   }
 
   .navAction {
-    margin-left: 0;
+    display: none;
   }
 
   .navMenu {
@@ -185,6 +185,10 @@
 
   .logo {
     font-size: 1.2rem;
+  }
+
+  .menuToggle {
+    margin-right: 0;
   }
 
   .ctaButton {
